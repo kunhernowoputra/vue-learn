@@ -1,23 +1,22 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
-</template>
-
 <script>
+/* eslint-disable */
+import Firebase from 'firebase'
+
+let config = {
+    apiKey: "AIzaSyD7IJqDuafsgJedfJhIIrC471mHjjkSjOI",
+    authDomain: "vue-learn-c6979.firebaseapp.com",
+    databaseURL: "https://vue-learn-c6979.firebaseio.com",
+    projectId: "vue-learn-c6979",
+    storageBucket: "vue-learn-c6979.appspot.com",
+    messagingSenderId: "434089081705"
+};
+let app = Firebase.initializeApp(config);
+let db = app.database()
 export default {
-  name: 'app'
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<template>
+    <router-view></router-view>
+</template>
+<style scoped>
 </style>
