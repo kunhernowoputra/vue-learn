@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueFire from 'vuefire'
+import '@/assets/styles.css'
 
 Vue.use(VueFire)
 
