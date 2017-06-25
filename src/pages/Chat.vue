@@ -2,10 +2,11 @@
 import ChatAside from '@/components/chats/Aside'
 import ChatScreen from '@/components/chats/Screen'
 import ChatConversation from '@/components/chats/Conversation'
+import ChatSubmit from '@/components/chats/Submit'
 /* eslint-disable */
 export default {
     components: {
-        ChatAside, ChatScreen, ChatConversation
+        ChatAside, ChatScreen, ChatConversation, ChatSubmit
     },
     computed: {
         users () {
@@ -18,22 +19,23 @@ export default {
 <template>
     <div class="columns is-gapless">
         <div class="column is-one-quarter">
-            <chat-aside>
+            <!-- <chat-aside>
                 <p slot="title">Users Online {{users.length}}</p>
                 <li v-for="(user, index) in users" key="index">
                     <a href="">{{user.name}}</a>
                 </li>
-            </chat-aside>
+            </chat-aside> -->
         </div>
         <div class="column">
             <chat-screen>
-                <chat-conversation :users="users"></chat-conversation>
+                <chat-conversation :users="users" slot="text"></chat-conversation>
+                <chat-submit slot="button"></chat-submit>
             </chat-screen>
         </div>
         <div class="column is-one-quarter">
-            <chat-aside>
+            <!-- <chat-aside>
                 <p slot="title">Toolbar</p>
-            </chat-aside>
+            </chat-aside> -->
         </div>
     </div>
 </template>

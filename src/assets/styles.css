@@ -1,9 +1,7 @@
-/*Color*/
-.k-grey {
-    background-color: #efefef;
+/*Body*/
+html {
+    /*overflow: hidden;*/
 }
-
-
 /*aside*/
 aside .menu-label {
     color: white;
@@ -13,32 +11,37 @@ aside .menu-label {
 }
 
 /*Conversation*/
-.media {
-    margin:10px
-}
-.media+.media {
-    margin: 0px;
+/*.conversation {
+    width: 60%;
     padding: 0px;
 }
-.card .media:not(:last-child) {
-    margin: 0px;
+.conversation .media-content {
+    padding: 10px;
 }
-
-.card .media:nth-of-type(even) {
-    background-color: #e8f8ff;
-    width: 50%;
+.conversation:not(:last-child) {
+    margin-bottom: 45px;
+}
+.conversation:nth-child(odd) {
+    float: left;
+}
+.conversation:nth-child(even) {
     float: right;
-    border-radius: 10px;
-    padding: 10px;
 }
-.card .media .media-content .content p small a{
-    font-size: 11px;
+.conversation .timestamp {
+    position: relative;
+    font-size: 10px;
+    top: 50px;
+    display: block;
 }
-.card .media:nth-of-type(odd) {
-    width: 50%;
-    background-color: #efefef;
-    border-radius: 10px;
-    padding: 10px;
-    clear: both;
+.conversation .timestamp .fa{
+    font-size: 12px;
+}*/
 
+/*Screen*/
+.screen .card-content{
+        max-height: 400px;
+        overflow-y:auto;
+}
+.screen footer{
+    margin-top: 30px;
 }

@@ -5,23 +5,23 @@
     }
 </script>
 <template>
-    <div class="is-clearfix">
-        <article class="media" v-for="(user, index) in users" :key="index">
-            <figure class="media-left">
-                <p class="image is-48x48">
-                    <img src="~@/assets/logo.png" alt="Image">
-                </p>
-            </figure>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        {{user.text}}
-                        <br>
-                        <small><a>{{user.timestamp}}</a></small>
-                    </p>
+    <div>
+        <div class="conversation box" v-for="(user, index) in users" :key="index">
+            <div class="article">
+                <div class="media-content">
+                    <strong>{{user.name}}</strong>
+                    <br>
+                    {{user.text}}
+                    <br>
+                    <small class="timestamp">
+                        <span class="icon">
+                            <i class="fa fa-clock-o"></i>
+                        </span>
+                        {{user.timestamp}}
+                    </small>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
 </template>
 <style scoped>
